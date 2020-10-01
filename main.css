@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(247, 119, 32);
+  background: linear-gradient(
+    90deg,
+    rgba(247, 119, 32, 0.5466561624649859) 0%,
+    rgba(251, 109, 23, 1) 61%
+  );
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*Generic class*/
+.content {
+  color: black;
+  text-align: center;
+  font-size: 20px;
+}
+
+/*Container
+    -modified by css events.
+*/
+#root {
+  height: 350px;
+  width: 350px;
+  background-color: #f1f6f9;
+  border: 1px black solid;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-h1 {
+  font-size: 40px;
+  margin-top: 50px;
+}
+.top-head-player {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  font-size: 16px;
+  color: white;
+  padding: 10px;
+
+  /*Animation used in Calculator as well animation was 3s, but 2 is better*/
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.top-head-player span {
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.712);
+}
+
+#player-form {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+#player-form input {
+  padding: 8px;
+  margin: 20px;
+}
+
+#start-btn {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 2rem;
+  color: white;
+  background: green;
+  border: 0px;
+  border-radius: 20px;
+}
+#start-btn:hover {
+  opacity: 0.7;
+}
+
+/*Tic-tac-toe grid*/
+.grid-build {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  width: 100%;
+  height: 100%;
+  border: 5px double orange;
+
+  /*Animation used in Calculator as well animation was 3s, but 2 is better*/
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.grid-child {
+  background-color: white;
+  border: 2px solid black;
+
+  /*For images*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.grid-child:hover {
+  cursor: pointer;
+  background-color: rgba(177, 173, 165, 0.753);
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #root {
+    margin-top: 10%;
+  }
+}
