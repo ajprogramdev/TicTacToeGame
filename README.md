@@ -1,6 +1,6 @@
 # Welcome to TacTacToeGame.
 ## Purpose: 
-This proyect was builtto practice using IIFE's.
+This project was builtto practice using IIFE's.
 ## Description:
 
 
